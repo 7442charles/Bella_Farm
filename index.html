@@ -107,39 +107,38 @@
     <!-- Hero Section -->
     <section class="relative h-[90vh] flex items-start justify-center text-white">
         <!-- Background Image with Dripping Effect -->
-        <div class="absolute top-0 left-0 w-full h-[100%] bg-no-repeat bg-bottom bg-cover"
+        <div class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-bottom bg-cover"
             style="background-image: url('Assets/images/drippingbg.png');">
         </div>
-    
+
         <!-- Hero Content -->
-        <div class="relative z-10 container flex flex-col md:flex-row items-center justify-between px-0 md:px-12">
+        <div class="relative z-10 container flex flex-col md:flex-row items-center justify-between px-4 md:px-12">
             <!-- Right Side Image (Order 1 on Mobile, Order 2 on Desktop) -->
-            <div class="md:w-1/2 flex justify-center order-1 md:order-2 mt- md:mt-0">
+            <div class="md:w-1/2 flex justify-center order-1 md:order-2 mt-4 md:mt-0">
                 <img src="Assets/images/honey.png" alt="Honey Jar" 
-                    class="w-64 sm:w-72 md:w-96 lg:w-[450px] xl:w-[500px]">
+                    class="w-3/4 sm:w-2/3 md:w-96 lg:w-[450px] xl:w-[500px] object-contain">
             </div>
-    
+
             <!-- Left Side Content (Order 2 on Mobile, Order 1 on Desktop) -->
             <div class="md:w-1/2 flex flex-col relative order-2 md:order-1">
                 <!-- Left SVG Border -->
-                <img src="Assets/images/line.png" alt="Bee Border" 
-                    class="absolute left-0 top-0 h-full w-auto z-[-1]">
-            
+                <!-- <img src="Assets/images/line.png" alt="Bee Border" class="absolute left-0 top-0 h-full w-auto z-[-1]"> -->
+
                 <!-- First paragraph (aligned right, next to the image) -->
-                <p class="text-base md:text-lg lg:text-xl text-white text-right self-end">
+                <p class="text-2xl md:text-xl lg:text-2xl text-white text-right self-end">
                     Bzzzzzzzz........ we are dripping <br> all the way to your pot
                 </p>
-            
+
                 <!-- Second paragraph (aligned left, near left margin) -->
-                <p class="text-base md:text-lg lg:text-xl text-white text-left self-center mt-8 md:mt-16">
+                <p class="text-2xl md:text-xl lg:text-2xl text-white text-left self-center mt-4 md:mt-8">
                     Make healthy honey part <br> of your regular diet and <br> experience the sweetness.
                 </p>
-            
+
                 <!-- Button (Centered under the text) -->
                 <a href="#" class="inline-block bg-[#1E1E1E] text-[#FAB413] font-semibold py-2 px-6 rounded-lg hover:bg-gray-800 self-center mt-4">
                     Order Now
                 </a>
-            
+
                 <img src="Assets/images/bee.svg" alt="Bee" width="30" height="30" class="self-center mt-4">
             </div>
         </div>
@@ -170,14 +169,18 @@
     <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-6 md:mx-auto max-w-[90%]">
 
+            <!-- Product card 1 -->
             <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
                 <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
                 <div class="p-4">
                     <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
                     <p class="text-gray-600">Ksh 1000</p>
                     <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
                             <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
                                 <span>-</span>
                             </button>
@@ -188,49 +191,29 @@
                                 <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
                             </button>
                         </div>
-                        
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
                             Order Now
                         </button>
-                        
-                    </div> 
+                    </div>
                 </div>
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
-                <img src="Assets/images/product.png" alt="Bee Tinture" class=" w-full">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (50ml)</h2>
-                    <p class="text-gray-600">Ksh 1800</p>
-                    <p class="text-gray-600 mt-2">Experience the rich flavor and health benefits of our premium honey | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
-                                <span>-</span>
-                            </button>
-                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
-                                <span>+</span>
-                            </button>
-                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
-                                <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
-                            </button>
-                        </div>
-
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
-                            Order Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+            
+            <!-- product card 2 -->
             <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
                 <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (100ml)</h2>
-                    <p class="text-gray-600">Ksh 3000</p>
-                    <p class="text-gray-600 mt-2">The perfect addition to your meals for a touch of sweetness | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
+                    <p class="text-gray-600">Ksh 1000</p>
+                    <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
                             <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
                                 <span>-</span>
                             </button>
@@ -241,21 +224,28 @@
                                 <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
                             </button>
                         </div>
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
                             Order Now
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!-- product card 3 -->
             <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
-                <img src="Assets/images/product.png" alt="Bee Tinture" class=" w-full">
+                <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (50ml)</h2>
-                    <p class="text-gray-600">Ksh 1800</p>
-                    <p class="text-gray-600 mt-2">Experience the rich flavor and health benefits of our premium honey | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
+                    <p class="text-gray-600">Ksh 1000</p>
+                    <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
                             <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
                                 <span>-</span>
                             </button>
@@ -266,22 +256,60 @@
                                 <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
                             </button>
                         </div>
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
+            <!-- product card 4 -->
+            <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
+                <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
+                    <p class="text-gray-600">Ksh 1000</p>
+                    <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
+                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
+                                <span>-</span>
+                            </button>
+                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
+                                <span>+</span>
+                            </button>
+                            <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
+                                <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
+                            </button>
+                        </div>
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
                             Order Now
                         </button>
                     </div>
                 </div>
             </div> 
 
+            <!-- product card 5 -->
             <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
-                <img src="Assets/images/product.png" alt="Bee Tinture" class=" w-full">
+                <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (100ml)</h2>
-                    <p class="text-gray-600">Ksh 1800</p>
-                    <p class="text-gray-600 mt-2">Experience the rich flavor and health benefits of our premium honey | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
+                    <p class="text-gray-600">Ksh 1000</p>
+                    <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
                             <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
                                 <span>-</span>
                             </button>
@@ -292,21 +320,29 @@
                                 <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
                             </button>
                         </div>
-
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
                             Order Now
                         </button>
                     </div>
                 </div>
             </div>
+
+
+            <!-- product card 6 -->
             <div class="bg-white rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl hover:shadow-gray-500 transition duration-300 overflow-hidden p-4">
-                <img src="Assets/images/product.png" alt="Bee Tinture" class=" w-full">
+                <img src="Assets/images/product.png" alt="Bee Tinture" class="w-full">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (150ml)</h2>
-                    <p class="text-gray-600">Ksh 1800</p>
-                    <p class="text-gray-600 mt-2">Experience the rich flavor and health benefits of our premium honey | Instock</p>
-                    <div class="mt-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                    <h2 class="text-xl font-bold text-gray-800">Bee Tinture (20ml)</h2>
+                    <p class="text-gray-600">Ksh 1000</p>
+                    <p class="text-gray-600 mt-2">Make healthy honey part of your regular diet and experience the sweetness | Instock</p>
+                    
+                    <!-- Wrapper for buttons -->
+                    <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                        <!-- Button Group (Evenly spaced on mobile) -->
+                        <div class="flex justify-between w-full md:w-auto space-x-2">
                             <button class="hover:bg-[#FAB413] text-gray-800 font-bold w-12 h-12 rounded flex justify-center items-center">
                                 <span>-</span>
                             </button>
@@ -317,8 +353,10 @@
                                 <img src="Assets/images/shopping_cart.svg" alt="" class="w-6 h-6">
                             </button>
                         </div>
-
-                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300">
+            
+                        <!-- Order Now Button (Stacks below on mobile) -->
+                        <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            w-[70%] mx-auto mt-3 md:mt-0 md:w-auto">
                             Order Now
                         </button>
                     </div>
@@ -506,7 +544,6 @@
         </p>
     </footer>
 
-    
 
     <script>
        const menuBtn = document.getElementById('menu-btn');
