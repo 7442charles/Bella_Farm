@@ -1,4 +1,5 @@
 
 body {
-    font-family: "K2D", serif;;
+    font-family: "K2D", serif;
+    /* overflow-x: hidden; */
 }
