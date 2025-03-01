@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Tailwind CSS CDN -->
+     <script src="https://cdn.tailwindcss.com" ></script>
+</head>
+<body>
+    <div class="p-6 bg-white rounded-2xl shadow-md">
+        <h2 class="text-xl font-semibold mb-4 text-[#FAB413]">Confirm your products</h2>
+        <div class="space-y-4">
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span class="font-medium">Product Name</span>
+                <span class="font-medium">Price</span>
+                <span class="font-medium">Quantity</span>
+                <span class="font-medium">Total Price</span>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span>Example Product 1</span>
+                <span>Ksh 2000</span>
+                <span>1</span>
+                <span>Ksh 2000</span>
+                <button class="absolute -top-2 -right-2 remove-row">
+                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
+                </button>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span>Example Product 2</span>
+                <span>Ksh 1500</span>
+                <span>1</span>
+                <span>Ksh 1500</span>
+                <button class="absolute -top-2 -right-2 remove-row">
+                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
+                </button>
+            </div>
+    
+            <!-- Master Row with Total Cost and Buttons -->
+            <div class=" p-4 rounded-lg flex justify-between items-center font-semibold text-lg">
+                <span class="font-bold text-black">Total Cost: Ksh 3500</span>
+                <div class="flex space-x-4">
+                    <button class="bg-[#FAB413] text-white py-2 px-4 rounded-lg hover:bg-yellow-500">
+                        Go back to add products
+                    </button>
+                    <button class="bg-[#FA1313] text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                        Complete my order and pay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.remove-row').forEach(button => {
+            button.addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

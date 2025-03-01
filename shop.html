@@ -358,7 +358,10 @@
         </button>
     </div>
     
-    
+    <!-- Floating Button -->
+    <button class="fixed bottom-4 right-4 bg-black text-white p-4 rounded-full shadow-lg hover:bg-opacity-80 transition" id="openModal">
+        <img src="Assets/images/cart.svg" alt="Chat Icon" class="w-6 h-6">
+    </button>
 
     <!-- Footer Section -->
     <footer class="bg-[#1E1E1E] text-white py-10">
@@ -420,6 +423,57 @@
         </p>
     </footer>
 
+    <!-- Modal Backdrop -->
+<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-2xl shadow-md w-[90%] max-w-2xl">
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-semibold text-[#FAB413]">Confirm your products</h2>
+            <button id="closeModal">
+                <img src="Assets/images/clear_svg.svg" alt="Close" class="w-6 h-6">
+            </button>
+        </div>
+
+        <div class="space-y-4 mt-4">
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span class="font-medium">Product Name</span>
+                <span class="font-medium">Price</span>
+                <span class="font-medium">Quantity</span>
+                <span class="font-medium">Total Price</span>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span>Example Product 1</span>
+                <span>Ksh 2000</span>
+                <span>1</span>
+                <span>Ksh 2000</span>
+                <button class="absolute -top-2 -right-2 remove-row">
+                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
+                </button>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                <span>Example Product 2</span>
+                <span>Ksh 1500</span>
+                <span>1</span>
+                <span>Ksh 1500</span>
+                <button class="absolute -top-2 -right-2 remove-row">
+                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
+                </button>
+            </div>
+
+            <!-- Master Row with Total Cost and Buttons -->
+            <div class="p-4 rounded-lg flex justify-between items-center font-semibold text-lg">
+                <span class="font-bold text-black">Total Cost: Ksh 3500</span>
+                <div class="flex space-x-4">
+                    <button class="bg-[#FAB413] text-white py-2 px-4 rounded-lg hover:bg-yellow-500">
+                        Go back to add products
+                    </button>
+                    <button class="bg-[#FA1313] text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                        Complete my order and pay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script>
        const menuBtn = document.getElementById('menu-btn');
@@ -430,6 +484,34 @@
         });
 
     </script>
+
+<script>
+    document.querySelectorAll('.remove-row').forEach(button => {
+        button.addEventListener('click', function () {
+            this.parentElement.remove();
+        });
+    });
+
+    // Modal Controls
+    const modal = document.getElementById('productModal');
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    openModalBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    // Close modal if clicking outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+</script>
 
     <script src="Assets/js/main.js"></script>
 </body>
