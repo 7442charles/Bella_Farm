@@ -351,21 +351,19 @@
         </div>
     </section>
 
-<!-- Order Modal -->
-<div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-        <h2 class="text-xl font-bold text-[#FAB413]" id="modalProductName" ></h2>
-        <p class="text-black font-bold mt-2">Price: <span id="modalProductPrice" class="text-[#FAB413] font-bold"></span></p>
-        <p class="text-black font-bold mt-2">Quantity: <span id="modalProductQuantity"></span></p>
+    <!-- Order now Modal -->
+    <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-bold text-[#FAB413]" id="modalProductName" ></h2>
+            <p class="text-black font-bold mt-2">Price: <span id="modalProductPrice" class="text-[#FAB413] font-bold"></span></p>
+            <p class="text-black font-bold mt-2">Quantity: <span id="modalProductQuantity"></span></p>
 
-        <div class="flex justify-between mt-4">
-            <button id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded">Close</button>
-            <button class="bg-[#FAB413] text-white px-4 py-2 rounded">Proceed to Payment</button>
+            <div class="flex justify-between mt-4">
+                <button id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded">Close</button>
+                <button class="bg-[#FAB413] text-white px-4 py-2 rounded">Proceed to Payment</button>
+            </div>
         </div>
     </div>
-</div>
-
-
 
 
     <div class="flex justify-end space-x-4 p-4">
@@ -532,47 +530,6 @@
         });
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("orderModal");
-        const closeModal = document.getElementById("closeModal");
-        const modalProductName = document.getElementById("modalProductName");
-        const modalProductPrice = document.getElementById("modalProductPrice");
-        const modalProductQuantity = document.getElementById("modalProductQuantity");
-    
-        // Select all "Order Now" buttons
-        const orderButtons = document.querySelectorAll(".product-card .order-now");
-    
-        orderButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                const productCard = this.closest(".product-card"); // Find the parent product card
-                const productName = productCard.querySelector(".product-name").textContent;
-                const productPrice = productCard.querySelector(".product-price").textContent;
-                const productQuantity = productCard.querySelector(".quantity").textContent;
-    
-                // Update modal content
-                modalProductName.textContent = productName;
-                modalProductPrice.textContent = productPrice;
-                modalProductQuantity.textContent = productQuantity;
-    
-                // Show modal
-                modal.classList.remove("hidden");
-            });
-        });
-    
-        // Close modal when clicking close button
-        closeModal.addEventListener("click", function () {
-            modal.classList.add("hidden");
-        });
-    
-        // Close modal when clicking outside the modal
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.classList.add("hidden");
-            }
-        });
-    });
-    </script>
     
 
     <script src="Assets/js/main.js"></script>

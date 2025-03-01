@@ -43,3 +43,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// order now modal handling
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("orderModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalProductName = document.getElementById("modalProductName");
+    const modalProductPrice = document.getElementById("modalProductPrice");
+    const modalProductQuantity = document.getElementById("modalProductQuantity");
+
+    // Select all "Order Now" buttons
+    const orderButtons = document.querySelectorAll(".product-card .order-now");
+
+    orderButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const productCard = this.closest(".product-card"); // Find the parent product card
+            const productName = productCard.querySelector(".product-name").textContent;
+            const productPrice = productCard.querySelector(".product-price").textContent;
+            const productQuantity = productCard.querySelector(".quantity").textContent;
+
+            // Update modal content
+            modalProductName.textContent = productName;
+            modalProductPrice.textContent = productPrice;
+            modalProductQuantity.textContent = productQuantity;
+
+            // Show modal
+            modal.classList.remove("hidden");
+        });
+    });
+
+    // Close modal when clicking close button
+    closeModal.addEventListener("click", function () {
+        modal.classList.add("hidden");
+    });
+
+    // Close modal when clicking outside the modal
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});
