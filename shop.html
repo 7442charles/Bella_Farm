@@ -59,7 +59,7 @@
                 <ul class="hidden md:flex space-x-6 font-medium">
                     <li><a href="index.html" class="block text-black">Home</a></li>
                     <li><a href="#" class="block text-black">About Us</a></li>
-                    <li><a href="#" class="block text-black">Products</a></li>
+                    <li><a href="shop.html" class="block text-black">Shop</a></li>
                     <li><a href="#" class="block text-black">Contact Us</a></li>
                     <li><a href="blog.html" class="block text-black">Blog</a></li>
                 </ul>
@@ -118,7 +118,7 @@
                 <div class="p-4">
                     <!-- Flex container for heading and price -->
                     <div class="flex justify-between items-center">
-                        <h2 class="text-xl font-bold text-gray-800 product-name">Bee Tinture (20ml)</h2>
+                        <h2 class="text-xl font-bold text-gray-800 product-name">Acacia Honey (20ml)</h2>
                         <p class="text-black font-bold product-price">Ksh 1000</p>
                     </div>
             
@@ -142,7 +142,7 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
@@ -181,7 +181,7 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
@@ -220,7 +220,7 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
@@ -259,7 +259,7 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
@@ -298,10 +298,11 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -337,10 +338,11 @@
                             </div>
             
                             <!-- Order Now Button -->
-                            <button class="bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
+                            <button class="order-now bg-[#FAB413] hover:bg-[#FCEB7A] text-white hover:text-black font-bold py-2 px-4 rounded transition duration-300 
                                 w-full md:w-full lg:w-auto mt-3">
                                 Order Now
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -348,6 +350,23 @@
             
         </div>
     </section>
+
+<!-- Order Modal -->
+<div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-xl font-bold text-[#FAB413]" id="modalProductName" ></h2>
+        <p class="text-black font-bold mt-2">Price: <span id="modalProductPrice" class="text-[#FAB413] font-bold"></span></p>
+        <p class="text-black font-bold mt-2">Quantity: <span id="modalProductQuantity"></span></p>
+
+        <div class="flex justify-between mt-4">
+            <button id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded">Close</button>
+            <button class="bg-[#FAB413] text-white px-4 py-2 rounded">Proceed to Payment</button>
+        </div>
+    </div>
+</div>
+
+
+
 
     <div class="flex justify-end space-x-4 p-4">
         <button class="bg-red-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-red-700">
@@ -423,57 +442,57 @@
         </p>
     </footer>
 
-    <!-- Modal Backdrop -->
-<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-6 rounded-2xl shadow-md w-[90%] max-w-2xl">
-        <div class="flex justify-between items-center">
-            <h2 class="text-xl font-semibold text-[#FAB413]">Confirm your products</h2>
-            <button id="closeModal">
-                <img src="Assets/images/clear_svg.svg" alt="Close" class="w-6 h-6">
-            </button>
-        </div>
-
-        <div class="space-y-4 mt-4">
-            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
-                <span class="font-medium">Product Name</span>
-                <span class="font-medium">Price</span>
-                <span class="font-medium">Quantity</span>
-                <span class="font-medium">Total Price</span>
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
-                <span>Example Product 1</span>
-                <span>Ksh 2000</span>
-                <span>1</span>
-                <span>Ksh 2000</span>
-                <button class="absolute -top-2 -right-2 remove-row">
-                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
-                </button>
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
-                <span>Example Product 2</span>
-                <span>Ksh 1500</span>
-                <span>1</span>
-                <span>Ksh 1500</span>
-                <button class="absolute -top-2 -right-2 remove-row">
-                    <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
+    <!-- Cart modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-2xl shadow-md w-[90%] max-w-2xl">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-semibold text-[#FAB413]">Confirm your products</h2>
+                <button id="closeModal">
+                    <img src="Assets/images/clear_svg.svg" alt="Close" class="w-6 h-6">
                 </button>
             </div>
 
-            <!-- Master Row with Total Cost and Buttons -->
-            <div class="p-4 rounded-lg flex justify-between items-center font-semibold text-lg">
-                <span class="font-bold text-black">Total Cost: Ksh 3500</span>
-                <div class="flex space-x-4">
-                    <button class="bg-[#FAB413] text-white py-2 px-4 rounded-lg hover:bg-yellow-500">
-                        Go back to add products
+            <div class="space-y-4 mt-4">
+                <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                    <span class="font-medium">Product Name</span>
+                    <span class="font-medium">Price</span>
+                    <span class="font-medium">Quantity</span>
+                    <span class="font-medium">Total Price</span>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                    <span>Example Product 1</span>
+                    <span>Ksh 2000</span>
+                    <span>1</span>
+                    <span>Ksh 2000</span>
+                    <button class="absolute -top-2 -right-2 remove-row">
+                        <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
                     </button>
-                    <button class="bg-[#FA1313] text-white py-2 px-4 rounded-lg hover:bg-red-600">
-                        Complete my order and pay
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg grid grid-cols-4 gap-4 relative">
+                    <span>Example Product 2</span>
+                    <span>Ksh 1500</span>
+                    <span>1</span>
+                    <span>Ksh 1500</span>
+                    <button class="absolute -top-2 -right-2 remove-row">
+                        <img src="Assets/images/clear_svg.svg" alt="Remove" class="w-6 h-6">
                     </button>
+                </div>
+
+                <!-- Master Row with Total Cost and Buttons -->
+                <div class="p-4 rounded-lg flex justify-between items-center font-semibold text-lg">
+                    <span class="font-bold text-black">Total Cost: Ksh 3500</span>
+                    <div class="flex space-x-4">
+                        <button class="bg-[#FAB413] text-white py-2 px-4 rounded-lg hover:bg-yellow-500">
+                            Go back to add products
+                        </button>
+                        <button class="bg-[#FA1313] text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                            Complete my order and pay
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <script>
        const menuBtn = document.getElementById('menu-btn');
@@ -485,33 +504,76 @@
 
     </script>
 
+    <script>
+        document.querySelectorAll('.remove-row').forEach(button => {
+            button.addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+        });
+
+        // Modal Controls
+        const modal = document.getElementById('productModal');
+        const openModalBtn = document.getElementById('openModal');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        openModalBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // Close modal if clicking outside content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    </script>
+
 <script>
-    document.querySelectorAll('.remove-row').forEach(button => {
-        button.addEventListener('click', function () {
-            this.parentElement.remove();
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("orderModal");
+        const closeModal = document.getElementById("closeModal");
+        const modalProductName = document.getElementById("modalProductName");
+        const modalProductPrice = document.getElementById("modalProductPrice");
+        const modalProductQuantity = document.getElementById("modalProductQuantity");
+    
+        // Select all "Order Now" buttons
+        const orderButtons = document.querySelectorAll(".product-card .order-now");
+    
+        orderButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const productCard = this.closest(".product-card"); // Find the parent product card
+                const productName = productCard.querySelector(".product-name").textContent;
+                const productPrice = productCard.querySelector(".product-price").textContent;
+                const productQuantity = productCard.querySelector(".quantity").textContent;
+    
+                // Update modal content
+                modalProductName.textContent = productName;
+                modalProductPrice.textContent = productPrice;
+                modalProductQuantity.textContent = productQuantity;
+    
+                // Show modal
+                modal.classList.remove("hidden");
+            });
+        });
+    
+        // Close modal when clicking close button
+        closeModal.addEventListener("click", function () {
+            modal.classList.add("hidden");
+        });
+    
+        // Close modal when clicking outside the modal
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.classList.add("hidden");
+            }
         });
     });
-
-    // Modal Controls
-    const modal = document.getElementById('productModal');
-    const openModalBtn = document.getElementById('openModal');
-    const closeModalBtn = document.getElementById('closeModal');
-
-    openModalBtn.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-        modal.classList.add('hidden');
-    });
-
-    // Close modal if clicking outside content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.add('hidden');
-        }
-    });
-</script>
+    </script>
+    
 
     <script src="Assets/js/main.js"></script>
 </body>
