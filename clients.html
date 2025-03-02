@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bella Farm | Organic Honey & Sustainable Beekeeping</title>
+        
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Bella Farm | Organic Honey & Sustainable Beekeeping">
+        <meta name="description" content="Discover pure, natural honey from Bella Farm's sustainable bee colonies. Explore our raw honey products, beekeeping workshops, and eco-friendly practices.">
+        <meta name="keywords" content="Beekeeping, Apitherapy, Honey, Bee Products, Propolis, Beeswax, Bee Venom, Royal Jelly, Beekeeping Equipment, Beekeeping Training, Apiary Management">
+        <meta name="author" content="Bella Farm">
+    
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="#"><!-- Add actual domaina name -->
+        <meta property="og:title" content="Bella Farm | Organic Honey & Sustainable Beekeeping">
+        <meta property="og:description" content="Discover pure, natural honey from Bella Farm's sustainable bee colonies. Explore our raw honey products, beekeeping workshops, and eco-friendly practices.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/7442charles/Bella_Farm/refs/heads/main/Assets/images/bella_farm_logo.png"><!-- Add actual image later -->
+    
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="#"><!-- Add actual domaina name -->
+        <meta property="twitter:title" content="Bella Farm | Organic Honey & Sustainable Beekeeping">
+        <meta property="twitter:description" content="Discover pure, natural honey from Bella Farm's sustainable bee colonies. Explore our raw honey products, beekeeping workshops, and eco-friendly practices.">
+        <meta property="twitter:image" content="https://raw.githubusercontent.com/7442charles/Bella_Farm/refs/heads/main/Assets/images/bella_farm_logo.png"><!-- Add actual image later -->
+    
+        <!-- Robots -->
+        <meta name="robots" content="index, follow">
+
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com" ></script>
+
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/bella_farm_logo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/bella_farm_logo.png">
+
+        <!-- Custom CSS -->
+         <link rel="stylesheet" href="Assets/css/styles.css">
+    </head>
+<body>
+   <!-- Header Section -->
+    <header class="bg-[#FAB413]">
+        <nav class="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
+            <!-- Logo & Navbar Links (Grouped Together) -->
+            <div class="flex-1 flex justify-start md:justify-center items-center space-x-8">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="Assets/images/bella_farm_logo.png" alt="Bella Farm" class="h-16">
+                </a>
+
+                <!-- Navbar Links -->
+                <ul class="hidden md:flex space-x-6 font-medium">
+                    <li><a href="index.html" class="block text-black">Home</a></li>
+                    <li><a href="#" class="block text-black">About Us</a></li>
+                    <li><a href="shop.html" class="block text-black">Shop</a></li>
+                    <li><a href="#" class="block text-black">Products</a></li>
+                    <li><a href="#" class="block text-black">Contact Us</a></li>
+                    <li><a href="blog.html" class="block text-black">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- CTA & Shopping Cart (Group Together) -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="bg-[#FFFFFF] text-black px-6 py-2 text-sm font-semibold uppercase">
+                    Make An Enquiry
+                </a>
+                <a href="#" class="text-white hover:text-yellow-100">
+                    <img src="Assets/images/shopping_cart.svg" alt="" class="h-8 w-8">
+                </a>
+            </div>
+
+            <!-- Mobile Icons (Shopping Cart & Menu Button) -->
+            <div class="flex items-center space-x-3 md:hidden">
+                <a href="#" class="text-white hover:text-yellow-100">
+                    <img src="Assets/images/shopping_cart.svg" alt="" class="h-8 w-8">
+                </a>
+                <button id="menu-btn" class="block text-gray-800 focus:outline-none" aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FAB413] shadow-lg">
+            <ul class="space-y-4 p-6">
+                <li><a href="index.html" class="block text-black">Home</a></li>
+                <li><a href="#" class="block text-black">About Us</a></li>
+                <li><a href="shop.html" class="block text-black">Shop</a></li>
+                <li><a href="#" class="block text-black">Products</a></li>
+                <li><a href="#" class="block text-black">Contact Us</a></li>
+                <li><a href="blog.html" class="block text-black">Blog</a></li>
+                <!-- CTA Button in Mobile Menu -->
+                <li>
+                    <a href="#" class="bg-[#FFFFFF] text-black px-6 py-2 text-sm font-semibold uppercase rounded-lg">
+                        Make An Enquiry
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-3xl bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-8">            
+            <!-- Toggle buttons -->
+            <div class="flex justify-center mb-8">
+              <div class="bg-gray-100 p-1 rounded-full flex w-full max-w-md">
+                <button 
+                  id="returningBtn"
+                  class="flex-1 py-2 px-4 rounded-full text-sm font-medium transition-all bg-amber-400 text-black shadow-md"
+                >
+                  I am a returning customer
+                </button>
+                <button 
+                  id="newCustomerBtn"
+                  class="flex-1 py-2 px-4 rounded-full text-sm font-medium transition-all text-black hover:bg-gray-200"
+                >
+                  This is my first time visiting
+                </button>
+              </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+              <!-- Returning customer form -->
+              <div id="returningCustomerForm" class="w-full md:w-1/2 transition-all duration-300 opacity-100">
+                <div class="space-y-4">
+                    <div class="relative flex items-center border border-gray-200 rounded-full overflow-hidden">
+                        <select 
+                          id="countryCode" 
+                          class="w-28 py-3 pl-3 pr-2 bg-[#FAB413] text-black font-medium rounded-l-full focus:outline-none"
+                        >
+                          <option value="+254">🇰🇪 +254</option> <!-- Default Kenya -->
+                        </select>
+                      
+                        <input 
+                          type="tel" 
+                          id="phoneNumber"
+                          class="w-full px-4 py-3 border-l border-gray-200 rounded-r-full focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
+                      
+                  
+                  <button 
+                    class="w-full bg-[#FAB413]  text-black font-medium py-3 px-4 rounded-full transition-colors"
+                  >
+                    Proceed to place my order
+                  </button>
+                </div>
+              </div>
+              
+              <!-- New customer form -->
+              <div id="newCustomerForm" class="w-full md:w-1/2 transition-all duration-300 opacity-0 md:opacity-50">
+                <div class="space-y-4">
+                  <input 
+                    type="text" 
+                    class="w-full px-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                    placeholder="Enter your full name"
+                    disabled
+                  />
+              
+                  <input 
+                    type="tel" 
+                    class="w-full px-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                    disabled
+                  />
+              
+                  <input 
+                    type="email" 
+                    class="w-full px-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                    placeholder="Enter your email"
+                    disabled
+                  />
+              
+                  <button 
+                    class="w-full bg-[#FAB413] text-black font-medium py-3 px-4 rounded-full transition-colors"
+                    disabled
+                  >
+                    Proceed to place my order
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="bg-[#1E1E1E] text-white py-10">
+        <div class="container max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Left Column: Logo & CTA -->
+            <div class="flex flex-col items-start space-y-4">
+                <!-- Logo -->
+                <img src="Assets/images/bella_farm_logo.png" alt="Bella Farm Logo" class="w-32">
+                <!-- CTA Button -->
+                <button class="bg-[#FAB413] text-black font-bold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition">
+                    Contact Us
+                </button>
+            </div>
+
+            <!-- Middle Column: Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-[#FAB413] mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-[#FAB413] transition">Home</a></li>
+                    <li><a href="#" class="hover:text-[#FAB413] transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-[#FAB413] transition">Products</a></li>
+                    <li><a href="#" class="hover:text-[#FAB413] transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Contact Info & Socials -->
+            <div>
+                <h3 class="text-xl font-bold text-[#FAB413] mb-4">Contact Us</h3>
+                <p>P.O. BOX 12345, Nairobi</p>
+                <p>Phone: +254 700 123 456</p>
+                <p>Email: info@bellafarm.com</p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-[#FAB413] transition">
+                        <img src="Assets\images\facebook.svg" alt="" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="hover:text-[#FAB413] transition">
+                        <img src="Assets\images\tiktok.svg" alt="" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="hover:text-[#FAB413] transition">
+                        <img src="Assets\images\twitter.svg" alt="" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="hover:text-[#FAB413] transition">
+                        <img src="Assets\images\instagram.svg" alt="" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Horizontal Line -->
+        <hr class="border-gray-600 my-6 mx-8">
+
+        <!-- Footer Credits -->
+        <p class="text-center text-gray-400 text-sm">
+            Designed and developed by <span class="text-[#FAB413] font-semibold"><a href="https://quickofficepointe.co.ke" target="_blank">Quick Office Pointe</a></span>
+        </p>
+    </footer>
+
+   
+    
+    <script>
+        const returningBtn = document.getElementById('returningBtn');
+        const newCustomerBtn = document.getElementById('newCustomerBtn');
+        const returningCustomerForm = document.getElementById('returningCustomerForm');
+        const newCustomerForm = document.getElementById('newCustomerForm');
+        
+        // Toggle between returning customer and new customer forms
+        returningBtn.addEventListener('click', () => {
+        // Update button styles
+        returningBtn.classList.add('bg-amber-400', 'text-white', 'shadow-md');
+        returningBtn.classList.remove('text-gray-700', 'hover:bg-gray-200');
+        
+        newCustomerBtn.classList.remove('bg-amber-400', 'text-white', 'shadow-md');
+        newCustomerBtn.classList.add('text-gray-700', 'hover:bg-gray-200');
+        
+        // Show returning customer form, hide new customer form
+        returningCustomerForm.classList.remove('opacity-0', 'md:opacity-50');
+        returningCustomerForm.classList.add('opacity-100');
+        
+        newCustomerForm.classList.remove('opacity-100');
+        newCustomerForm.classList.add('opacity-0', 'md:opacity-50');
+        
+        // Enable/disable form fields
+        enableReturningCustomerForm();
+        disableNewCustomerForm();
+        });
+        
+        newCustomerBtn.addEventListener('click', () => {
+        // Update button styles
+        newCustomerBtn.classList.add('bg-amber-400', 'text-white', 'shadow-md');
+        newCustomerBtn.classList.remove('text-gray-700', 'hover:bg-gray-200');
+        
+        returningBtn.classList.remove('bg-amber-400', 'text-white', 'shadow-md');
+        returningBtn.classList.add('text-gray-700', 'hover:bg-gray-200');
+        
+        // Show new customer form, hide returning customer form
+        newCustomerForm.classList.remove('opacity-0', 'md:opacity-50');
+        newCustomerForm.classList.add('opacity-100');
+        
+        returningCustomerForm.classList.remove('opacity-100');
+        returningCustomerForm.classList.add('opacity-0', 'md:opacity-50');
+        
+        // Enable/disable form fields
+        enableNewCustomerForm();
+        disableReturningCustomerForm();
+        });
+        
+        function enableReturningCustomerForm() {
+        const inputs = returningCustomerForm.querySelectorAll('input');
+        const button = returningCustomerForm.querySelector('button');
+        
+        inputs.forEach(input => input.disabled = false);
+        button.disabled = false;
+        }
+        
+        function disableReturningCustomerForm() {
+        const inputs = returningCustomerForm.querySelectorAll('input');
+        const button = returningCustomerForm.querySelector('button');
+        
+        inputs.forEach(input => input.disabled = true);
+        button.disabled = true;
+        }
+        
+        function enableNewCustomerForm() {
+        const inputs = newCustomerForm.querySelectorAll('input');
+        const button = newCustomerForm.querySelector('button');
+        
+        inputs.forEach(input => input.disabled = false);
+        button.disabled = false;
+        }
+        
+        function disableNewCustomerForm() {
+        const inputs = newCustomerForm.querySelectorAll('input');
+        const button = newCustomerForm.querySelector('button');
+        
+        inputs.forEach(input => input.disabled = true);
+        button.disabl
+        ed = true;
+        }
+        document.addEventListener("DOMContentLoaded", async () => {
+        const countryCodeSelect = document.getElementById("countryCode");
+        const phoneNumberInput = document.getElementById("phoneNumber");
+
+        try {
+            const response = await fetch("https://restcountries.com/v3.1/all");
+            const countries = await response.json();
+            
+            // Sort countries alphabetically by name
+            countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+            countries.forEach(country => {
+            if (country.idd && country.idd.root) {
+                const dialCode = country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : "");
+                const option = document.createElement("option");
+                option.value = dialCode;
+                option.textContent = `${country.flag} ${dialCode} (${country.name.common})`;
+                countryCodeSelect.appendChild(option);
+            }
+            });
+        } catch (error) {
+            console.error("Error fetching country codes:", error);
+        }
+
+        // Update phone input when country code is selected
+        countryCodeSelect.addEventListener("change", () => {
+            phoneNumberInput.value = countryCodeSelect.value + " ";
+        });
+        });
+
+    </script>
+</body>
+</html>
