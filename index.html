@@ -47,16 +47,16 @@
 <body>
    <!-- Header Section -->
     <header class="bg-[#FAB413]">
-        <nav class="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
-            <!-- Logo & Navbar Links (Grouped Together) -->
-            <div class="flex-1 flex justify-start md:justify-center items-center space-x-8">
+        <nav class="container mx-auto flex items-center justify-between py-4 px-4 sm:px-6 md:px-8 lg:px-12">
+            <!-- Logo & Navbar Links -->
+            <div class="flex-1 flex justify-start lg:justify-center items-center space-x-6 md:space-x-10">
                 <!-- Logo -->
                 <a href="#">
-                    <img src="Assets/images/bella_farm_logo.png" alt="Bella Farm" class="h-16">
+                    <img src="Assets/images/bella_farm_logo.png" alt="Bella Farm" class="h-14 md:h-16">
                 </a>
 
-                <!-- Navbar Links -->
-                <ul class="hidden md:flex space-x-6 font-medium">
+                <!-- Navbar Links (Hidden on small and tablet screens, show on large) -->
+                <ul class="hidden lg:flex space-x-5 lg:space-x-6 font-medium text-[15px] lg:text-base">
                     <li><a href="index.html" class="block text-black">Home</a></li>
                     <li><a href="#" class="block text-black">About Us</a></li>
                     <li><a href="shop.html" class="block text-black">Shop</a></li>
@@ -66,20 +66,20 @@
                 </ul>
             </div>
 
-            <!-- CTA & Shopping Cart (Group Together) -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#" class="bg-[#FFFFFF] text-black px-6 py-2 text-sm font-semibold uppercase">
+            <!-- CTA & Cart (Visible on large only) -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#" class="bg-[#FFFFFF] text-black px-6 py-2 text-sm font-semibold uppercase rounded-md">
                     Make An Enquiry
                 </a>
                 <a href="#" class="text-white hover:text-yellow-100">
-                    <img src="Assets/images/shopping_cart.svg" alt="" class="h-8 w-8">
+                    <img src="Assets/images/shopping_cart.svg" alt="Cart" class="h-8 w-8">
                 </a>
             </div>
 
-            <!-- Mobile Icons (Shopping Cart & Menu Button) -->
-            <div class="flex items-center space-x-3 md:hidden">
+            <!-- Mobile/Tablet Icons -->
+            <div class="flex items-center space-x-3 lg:hidden">
                 <a href="#" class="text-white hover:text-yellow-100">
-                    <img src="Assets/images/shopping_cart.svg" alt="" class="h-8 w-8">
+                    <img src="Assets/images/shopping_cart.svg" alt="Cart" class="h-8 w-8">
                 </a>
                 <button id="menu-btn" class="block text-gray-800 focus:outline-none" aria-label="Open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
@@ -89,16 +89,15 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#FAB413] shadow-lg">
-            <ul class="space-y-4 p-6">
+        <!-- Mobile/Tablet Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#FAB413] shadow-lg">
+            <ul class="space-y-4 p-6 text-[15px] md:text-base">
                 <li><a href="index.html" class="block text-black">Home</a></li>
                 <li><a href="#" class="block text-black">About Us</a></li>
                 <li><a href="shop.html" class="block text-black">Shop</a></li>
                 <li><a href="#" class="block text-black">Products</a></li>
                 <li><a href="#" class="block text-black">Contact Us</a></li>
                 <li><a href="blog.html" class="block text-black">Blog</a></li>
-                <!-- CTA Button in Mobile Menu -->
                 <li>
                     <a href="#" class="bg-[#FFFFFF] text-black px-6 py-2 text-sm font-semibold uppercase rounded-lg">
                         Make An Enquiry
@@ -108,45 +107,45 @@
         </div>
     </header>
 
+
     <!-- Hero Section -->
-    <section class="relative h-[90vh] flex items-start justify-center text-white">
+    <section class="relative h-[90vh] flex items-center justify-center text-white">
         <!-- Background Image with Dripping Effect -->
         <div class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-bottom bg-cover"
             style="background-image: url('Assets/images/drippingbg.png');">
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-10 container flex flex-col md:flex-row items-center justify-between px-4 md:px-12">
-            <!-- Right Side Image (Order 1 on Mobile, Order 2 on Desktop) -->
-            <div class="md:w-1/2 flex justify-center order-1 md:order-2 mt-4 md:mt-0">
+        <div class="relative z-10 container flex flex-col md:flex-row items-center justify-between px-4 md:px-12 h-full">
+            <!-- Right Side Image -->
+            <div class="md:w-1/2 flex justify-center items-center order-1 md:order-2 h-1/2 md:h-full">
                 <img src="Assets/images/honey.png" alt="Honey Jar" 
-                    class="w-3/4 sm:w-2/3 md:w-96 lg:w-[450px] xl:w-[500px] object-contain">
+                    class="w-3/4 sm:w-2/3 md:w-[350px] lg:w-[450px] xl:w-[500px] object-contain">
             </div>
 
-            <!-- Left Side Content (Order 2 on Mobile, Order 1 on Desktop) -->
-            <div class="md:w-1/2 flex flex-col relative order-2 md:order-1">
-                <!-- Left SVG Border -->
-                <!-- <img src="Assets/images/line.png" alt="Bee Border" class="absolute left-0 top-0 h-full w-auto z-[-1]"> -->
-
-                <!-- First paragraph (aligned right, next to the image) -->
-                <h2 class="text-2xl md:text-xl lg:text-2xl text-white text-right self-end">
+            <!-- Left Side Content -->
+            <div class="md:w-1/2 flex flex-col justify-center items-center order-2 md:order-1 text-center md:text-left space-y-5 md:space-y-8">
+                <!-- First paragraph -->
+                <h2 class="text-2xl md:text-3xl lg:text-4xl text-white font-semibold">
                     Bzzzzzzzz........ we are dripping <br> all the way to your pot
                 </h2>
 
-                <!-- Second paragraph (aligned left, near left margin) -->
-                <h2 class="text-2xl md:text-xl lg:text-2xl text-white text-left self-center mt-4 md:mt-8">
+                <!-- Second paragraph -->
+                <h2 class="text-xl md:text-2xl lg:text-3xl text-white">
                     Make healthy honey part <br> of your regular diet and <br> experience the sweetness.
                 </h2>
 
-                <!-- Button (Centered under the text) -->
-                <a href="#" class="inline-block bg-[#1E1E1E] text-[#FAB413] font-semibold py-2 px-6 rounded-lg hover:bg-gray-800 self-center mt-4">
+                <!-- Button -->
+                <a href="#" class="inline-block bg-[#1E1E1E] text-[#FAB413] font-semibold py-3 px-8 text-lg md:text-xl rounded-lg hover:bg-gray-800">
                     Order Now
                 </a>
 
-                <img src="Assets/images/bee.svg" alt="Bee" width="50" height="50" class="self-center mt-4">
+                <!-- Bee Image -->
+                <img src="Assets/images/bee.svg" alt="Bee" width="60" height="60">
             </div>
         </div>
     </section>
+
 
     <!-- mini CTA -->
     <section class="flex flex-col md:flex-row gap-8 items-center justify-center text-center mt-2">
